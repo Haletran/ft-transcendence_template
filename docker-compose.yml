@@ -1,0 +1,33 @@
+services:
+  frontend:
+    image: node:latest
+    container_name: frontend
+    command: [ "sh", "-c", "npm install && npm run dev"]
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    working_dir: /app
+    depends_on:
+      - backend
+  backend:
+    image: node:latest
+    container_name: backend
+    ports:
+      - "8080:8080"
+    command: [ "sh", "-c", "npm install && npm run dev"] 
+    networks:
+      - ft_transcendence-network
+    volumes:
+      - ./backend:/app
+    working_dir: /app
+  # database:
+  #   image: nouchka/sqlite3
+  #   container_name: database
+  #   volumes:
+  #     - ./database:/root/db
+  #   restart: always
+
+networks:
+  ft_transcendence-network:
+    driver: bridge
