@@ -1,5 +1,5 @@
 all:
-	@docker compose -f docker-compose.yml up --build -d --remove-orphans
+	@docker compose -f docker-compose.yml up --build --remove-orphans
 
 down:
 	-docker compose -f docker-compose.yml down
