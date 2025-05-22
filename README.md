@@ -11,3 +11,6 @@ This template includes a basic setup for a web application using:
 - TypeScript for type safety (both frontend and backend)
 - HOT reloading for development
 - API wrapper for the backend
+
+
+Tutorial on how to use it, will come soon...
