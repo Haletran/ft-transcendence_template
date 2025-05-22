@@ -10,13 +10,4 @@ This template includes a basic setup for a web application using:
 - Docker Compose for orchestration
 - TypeScript for type safety (both frontend and backend)
 - HOT reloading for development
-
-## FRONTEND 
-
-
-
-
-## BACKEND 
-
-
-## DATABASE
+- API wrapper for the backend
