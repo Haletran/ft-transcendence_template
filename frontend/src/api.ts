@@ -1,12 +1,13 @@
+import Cookies from 'js-cookies';
 // simple API wrapper for the backend
 // you can use this to call the API for every request
 
-// FOR now, JWT token are not setup in the backend
-export async function callAPI(request: string, token?: string, method: string = "GET") {
+export async function callAPI(request: string, method: string = "GET") {
   try {
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
     };
+    const token = Cookies.getItem('token') || "fake-jwt-token";
     if (token) {
       headers['Authorization'] = `Bearer ${token}`;
     }

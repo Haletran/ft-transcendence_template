@@ -13,11 +13,11 @@ services:
     depends_on:
       - backend
   backend:
-    image: node
+    image: node:20-alpine
     container_name: backend
     ports:
       - "8080:8080"
-    command: [ "sh", "-c", "npm install && npm run dev"] 
+    command: [ "sh", "-c", "npm rebuild && npm install && npm run dev"] 
     networks:
       - ft_transcendence-network
     volumes:
@@ -29,7 +29,7 @@ services:
   database:
     image: alpine:latest
     container_name: database
-    command: ["sh", "-c", "apk add --no-cache sqlite && tail -f /dev/null"]
+    command: ["sh", "-c", "apk add --no-cache sqlite && mkdir -p /root/db && touch /root/db/database.db && echo 'Database ready' && tail -f /dev/null"]
     networks:
       - ft_transcendence-network
     volumes:

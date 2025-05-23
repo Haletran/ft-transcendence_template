@@ -10,4 +10,10 @@ down:
 	-docker network prune -f
 	-docker builder prune --all --force
 
+delete-modules:
+	@echo "Deleting modules..."
+	@sudo rm -rf backend/node_modules
+	@sudo rm -rf frontend/node_modules
+	@echo "Modules deleted."
+
 re: down all
