@@ -27,13 +27,11 @@ If you want to add routes to your backend, go to the `backend/src/index.ts` :
 
 ```ts
 // Here is simple example of a route /api/ping
-
-instance.get('/ping', async (request, reply) => {
+instance.get('/api/ping', async (request, reply) => {
   return { message : "pong" }
 })
 
 // To called this route just use the wrapper like this :
-
 const data = await callAPI("/ping", "GET");
 console.log(data);
 // It it worked it will print "pong" in the console of your browser
