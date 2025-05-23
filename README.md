@@ -17,7 +17,7 @@ This template includes a basic setup for a web application using:
 
 Some commands for the project : 
 
-```
+```bash
 make # launch the backend
 make down # stop and delete all containers
 sudo npm install {name of the packages} # to install others packages if needed
