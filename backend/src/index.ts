@@ -31,6 +31,11 @@ server.addHook('onClose', async () => {
 
 const db = dbManager.getDatabase()
 
+
+server.get('/api/ping', async (request, reply) => {
+    return { message: 'pong' }
+})
+
 server.register((instance, opts, done) => {
   // in this prefix you can add all the routes related to the users
   instance.get('/:id', async (request, reply) => {

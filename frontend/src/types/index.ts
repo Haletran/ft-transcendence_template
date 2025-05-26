@@ -7,3 +7,12 @@ export interface User {
     created_at: string
     // add more properties needed
 }
+
+export interface Route {
+    path: string;
+    component: () => string | Promise<string>;
+}
+
+export interface RouteConfig {
+    routes: Route[];
+}

@@ -13,10 +13,11 @@ This template includes a basic setup for a web application using:
 - API wrapper for the backend (in api.js file on frontend)
 - `TailwindCSS` for styling
 - `Zod` for schema validation (setup in the backend but you should setup in the frontend too)
+- `SPA-ready` (Single Page Application ready)
 
 ## Documentation
 
-Some commands for the project : 
+### Some commands for the project : 
 
 ```bash
 make # launch the backend
@@ -24,7 +25,7 @@ make down # stop and delete all containers
 sudo npm install {name of the packages} # to install others packages if needed
 ```
 
-If you want to add routes to your backend, go to the `backend/src/index.ts` :
+### If you want to add routes to your backend, go to the `backend/src/index.ts` :
 
 ```ts
 // Here is simple example of a route /api/ping
@@ -47,8 +48,36 @@ your response. For example, the User interface will always be the same, since a 
 So you should use the User interface when getting the data of a user for example. 
 There is some code example in the `frontend` if needed.
 
-More to come...
- 
+### SPA
+
+To add a new page to your SPA, you should create a folder with the name of the route, like for example `profile` for the route `/profile`.
+Then, create an `index.ts` file in this folder  :
+
+```ts
+export function renderAbout(): string {
+  const html = `
+    <div>
+      <h1>About Us</h1>
+      <p>This is the about page of our single-page application.</p>
+    </div>
+  `;
+  return html;
+}
+```
+> There is working example for API calls in the `frontend/src/pages/test/index.ts` page.
+
+Then, you should add this route to the `frontend/src/router/index.ts` file like this :
+
+```ts
+const routes: Route[] = [
+  ...
+  // the one we just created
+  { path: '/about', component: renderAbout },
+  ...
+];
+```
+
+Then you can access this page by going to `http://localhost:3000/about` in your browser.
 
 ## DOCS Websites
 
