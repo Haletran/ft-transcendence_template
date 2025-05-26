@@ -36,6 +36,10 @@ services:
       - ./database:/root/db
     restart: always
 
+  # You also need to setup a reverse proxy like nginx, traeffik, or caddy
+  # To access the website only in port 80 or 443
+  # This will be used for production builds
+
 networks:
   ft_transcendence-network:
     driver: bridge

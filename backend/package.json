@@ -15,7 +15,8 @@
   "dependencies": {
     "@fastify/cors": "^11.0.1",
     "better-sqlite3": "^11.10.0",
-    "fastify": "^5.3.3"
+    "fastify": "^5.3.3",
+    "zod": "^3.25.28"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.13",

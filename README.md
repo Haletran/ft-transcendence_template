@@ -8,10 +8,11 @@ This template includes a basic setup for a web application using:
 - `SQLlite` for the database
 - `Docker` for containerization
 - `Docker Compose` for orchestration
-- `TypeScript` for type safety (both frontend and backend, might need to setup tRPC)
+- `TypeScript` for type safety (both frontend and backend)
 - HOT reloading for development
 - API wrapper for the backend (in api.js file on frontend)
 - `TailwindCSS` for styling
+- `Zod` for schema validation (setup in the backend but you should setup in the frontend too)
 
 ## Documentation
 
@@ -48,3 +49,15 @@ There is some code example in the `frontend` if needed.
 
 More to come...
  
+
+## DOCS Websites
+
+- [Fastify](https://www.fastify.io/docs/latest/)
+- [ViteJS](https://vitejs.dev/guide/)
+- [Docker](https://docs.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [Zod](https://zod.dev/)
+- [TailwindCSS](https://tailwindcss.com/docs)
+- [SQLite](https://www.sqlite.org/docs.html)
+- [API Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
