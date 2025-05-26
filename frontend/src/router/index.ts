@@ -2,9 +2,11 @@ import type { Route } from '../types';
 import { renderHome } from '../pages/home';
 import { render404 } from './../not_found';
 import { renderTest } from '../pages/test';
+import { renderPong } from '../pages/pong';
 
 const routes: Route[] = [
   { path: '/', component: renderHome },
+  { path : '/pong', component: renderPong },
   { path: '/test', component: renderTest },
   { path: '*', component: render404 },
 ];

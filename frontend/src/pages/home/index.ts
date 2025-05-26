@@ -12,6 +12,12 @@ export async function renderHome(): Promise<string> {
         <a href="/test" class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mb-6">
             Go to Test Page
         </a>
+        <a href="/pong" class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mb-6">
+            Go to Pong page
+        </a>
+        <a href="/404" class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mb-6">
+            Go to 404 page
+        </a>
         <p class="text-lg text-gray-700 dark:text-gray-300 mb-2 font-medium text-center">Made with ❤️ by bapasqui</p>
         <div class="flex justify-center">
           <a href="https://github.com/Haletran/ft-transcendence_template" target="_blank" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">
